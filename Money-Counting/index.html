@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Personal Bank</title>
+        <!-- tailwind css link -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <header>
+            <h1 class="text-5xl text-center mt-6 font-semibold">Welcome to my
+                <span
+                    class="text-violet-600 ">Bank</span>!!!</h1>
+        </header>
+
+        <main>
+            <section
+                class="mt-12 bg-blue-100 w-9/12 mx-auto p-8 my-auto rounded-md">
+                <h3 class="text-3xl mb-4 font-medium">Please Login</h3>
+                <div>
+                    <input type="text" id="user-email"
+                        class="px-3 w-9/12 block mb-2 rounded-sm"
+                        placeholder="Enter your email">
+                    <input type="password" id="user-password"
+                        class="px-3 w-9/12 mb-2 rounded-sm block"
+                        placeholder="Enter your password">
+                    <button id="btn-submit"
+                        class="bg-amber-600 hover:bg-sky-700 px-8 py-2 text-white font-medium rounded-lg">Submit</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- external js file -->
+        <script src="./js/login.js"></script>
+    </body>
+</html>
