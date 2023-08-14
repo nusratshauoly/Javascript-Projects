@@ -6,6 +6,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
 
 // clear the input
     withdrawField.value = '';
+// if enter invalid number 
     if (isNaN(newWithdrawAmount)) {
         alert('Please enter a valid number');
         return;

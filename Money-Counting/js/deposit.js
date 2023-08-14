@@ -7,6 +7,12 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
 // clear the please deposit input field
     depositField.value = '';
 
+// if enter invalid number  
+   if (isNaN(newDepositAmount)) {
+        alert('Please enter a valid number');
+        return;
+    }
+
 // -------------- Deposit Section -------------
     const depositTotalElement = document.getElementById('deposit-total');
     const previousdepositTotalString = depositTotalElement.innerText;
