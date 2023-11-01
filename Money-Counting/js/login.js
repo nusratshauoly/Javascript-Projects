@@ -5,11 +5,10 @@ document.getElementById('btn-submit').addEventListener('click', function () {
     const passwordField = document.getElementById('user-password');
     const password = passwordField.value;
 
-
-    if (email === 'santan@gmail.com' && password === 'secret'){
+    if (email === 'santan@gmail.com' && password === 'santan') {
         window.location.href = 'bank.html';
     }
     else {
-    alert("Cann't Enter!!! Forgot password?");
+        alert("Can't Enter!!! Forgot Password");
     }
 })

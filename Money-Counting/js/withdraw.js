@@ -1,38 +1,35 @@
-// --------- Please Withdraw Section ----------
 document.getElementById('btn-withdraw').addEventListener('click', function () {
+
+    // withdraw field
     const withdrawField = document.getElementById('withdraw-field');
     const newWithdrawAmountString = withdrawField.value;
     const newWithdrawAmount = parseFloat(newWithdrawAmountString);
-
-// clear the input
     withdrawField.value = '';
-// if enter invalid number 
+
+    // if enter invalid amount
     if (isNaN(newWithdrawAmount)) {
-        alert('Please enter a valid number');
-        return;
+        alert('Please enter a valid number!!!');
     }
 
-// ---------- withdraw section -----------
-    const withdrawTotalElement = document.getElementById('withdraw-total');
-    const previousWithdrawTotalString = withdrawTotalElement.innerText;
+    // withdraw total
+    const withdrawTotal = document.getElementById('withdraw-total');
+    const previousWithdrawTotalString = withdrawTotal.innerText;
     const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
-
-// ------- add previous and new withdraw amount -----------
     const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
-    withdrawTotalElement.innerText = currentWithdrawTotal;
+    withdrawTotal.innerText = currentWithdrawTotal;
 
-// --------- balance section -------------
-     const balanceTotalElement = document.getElementById('balance-total');
-    const previousBalanceTotalString = balanceTotalElement.innerText;
+    // balance total
+    const balanceTotal = document.getElementById('balance-total');
+    const previousBalanceTotalString = balanceTotal.innerText;
     const previousBalanceTotal = parseFloat(previousBalanceTotalString);
 
-//if want to withdraw more money than balance
+    // condition of withdrawing money
     if (newWithdrawAmount > previousBalanceTotal) {
-        alert("Account doesn't have sufficient balance");
-        return;
+        alert("Your Account doesn't have sufficient balance");
     }
     
-// --------- current balance after withdrawing -------------
+    // total balance after withdrawing
     const currentBalanceTotal = previousBalanceTotal - newWithdrawAmount;
-    balanceTotalElement.innerText = currentBalanceTotal;
+    balanceTotal.innerText = currentBalanceTotal;
+
 })

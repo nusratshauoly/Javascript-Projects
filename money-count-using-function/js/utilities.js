@@ -1,30 +1,26 @@
-// ------------ deposit & withdraw field -------------------
+// deposit & withdraw field
 function getInputFieldValueById(inputFieldId) {
     const inputField = document.getElementById(inputFieldId);
     const inputFieldValueString = inputField.value;
     const inputFieldValue = parseFloat(inputFieldValueString);
     inputField.value = '';
-   
     if (isNaN(inputFieldValue)) {
-        alert('enter a valid number!!!');
+        alert('Enter a valid Number!!!');
         return;
     }
     return inputFieldValue;
-     
 }
 
-// ------------ deposit & withdraw section -----------------
+// deposit and withdraw section
 function getTextElementValueById(textElementId) {
     const textElement = document.getElementById(textElementId);
-    const textElementValueString = textElement.innerText; 
+    const textElementValueString = textElement.innerText;
     const textElementValue = parseFloat(textElementValueString);
     return textElementValue;
 }
 
-// ------------ innertext of total deposit and balance --------------
+// set as innerText , total deposit and balance value
 function setTextElementValueById(textElementId, newValue) {
     const textElement = document.getElementById(textElementId);
     textElement.innerText = newValue;
-
-
 }
