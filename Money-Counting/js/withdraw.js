@@ -26,6 +26,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     // condition of withdrawing money
     if (newWithdrawAmount > previousBalanceTotal) {
         alert("Your Account doesn't have sufficient balance");
+        return;
     }
     
     // total balance after withdrawing
