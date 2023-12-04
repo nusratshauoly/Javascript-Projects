@@ -1,0 +1,5 @@
+Task list: 
+Text Editor টাইপের একটা লে-আউট বানাবে। সেখানে একটা Textarea থাকবে। সাথে বেশ কিছু বাটন থাকবে। এদের মধ্যে কোনো একটি বাটনে ক্লিক করলে textarea এর ভিতরের লিখা গুলোর স্টাইল বোল্ড হয়ে যাবে। ঠিক একইভাবে অন্যবাটন গুলো ব্যাবহার করে দেখো ইটালিক, আন্ডারলাইন, লেফট অ্যালাইন, রাইট অ্যালাইন, সেন্টার অ্যালাইন করতে পারো কিনা। এছাড়া একটা নম্বর টাইপের ইনপুট ফিল্ডে ফন্ট সাইজ ইনপুট নিবে। এরপর সে ভ্যালু ব্যাবহার করে টেক্সটের সাইজ পরিবর্তন করবে। আরেকটা নতুন জিনিস ট্রাই করতে পারো। টেক্সট গুলোর কালার পরিবর্তন করার চেষ্টা করে দেখতে পারো। এরজন্য ইনপুট এর type=”color” সম্পর্কে একটু জানতে হবে। 
+5. Text editor e likha jabe (B I) ei icon gulo font awesome theke niye ashte pari or ekta button diyeo korte pari. Boro ekta (text Area nibo), kono 1 ta icon e click korle text er style change hoye jabe. And icon e click korle oi icon er background color change hobe and abar click korle color chole jabe.
+6. aA er right pashe (input:type:color) diye html e select korbo
+7. aA er left side input field (input:type:number) diye set korbo select korle font size boro / choto hobe
