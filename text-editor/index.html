@@ -1,125 +1,69 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Text Editor</title>
-        <!--Bootstrap Cdn -->
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+        <!-- Bootstrap cdn -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous">
-        <!-- fontawesome cdn For Icons -->
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-            integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
-            crossorigin="anonymous" />
-        <link rel="stylesheet"
-            href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-            crossorigin="anonymous" />
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <!--Body start-->
 
+        <!-- fontawesome cdn For Icons -->
+        <script src="https://kit.fontawesome.com/f4b191b67e.js"
+            crossorigin="anonymous"></script>
+        <!-- external css file -->
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
     <body>
-        <section class>
-            <h1 class="shadow-sm">TEXT EDITOR</h1>
-            <div class="flex-box">
+        <section>
+            <h1>TEXT EDITOR</h1>
+            <div>
                 <div class="row">
                     <div class="col">
-                        <!-- Adding different buttons for 
-						different functionality-->
-                        <!--onclick attribute is added to give 
-						button a work to do when it is clicked-->
-                        <button type="button"
-                            onclick="f1()"
-                            class=" shadow-sm btn btn-outline-secondary"
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="Bold Text">
-                            Bold</button>
-                        <button type="button"
-                            onclick="f2()"
-                            class="shadow-sm btn btn-outline-success"
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="Italic Text">
-                            Italic</button>
-                        <button type="button"
-                            onclick="f3()"
-                            class=" shadow-sm btn btn-outline-primary"
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="Left Align">
-                            <i class="fas fa-align-left"></i></button>
-                        <button type="button"
-                            onclick="f4()"
-                            class="btn shadow-sm btn-outline-secondary"
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="Center Align">
-                            <i class="fas fa-align-center"></i></button>
-                        <button type="button"
-                            onclick="f5()"
-                            class="btn shadow-sm btn-outline-primary"
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="Right Align">
-                            <i class="fas fa-align-right"></i></button>
-                        <button type="button"
-                            onclick="f6()"
-                            class="btn shadow-sm btn-outline-secondary"
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="Uppercase Text">
-                            Upper Case</button>
-                        <button type="button"
-                            onclick="f7()"
-                            class="btn shadow-sm btn-outline-primary"
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="Lowercase Text">
-                            Lower Case</button>
-                        <button type="button"
-                            onclick="f8()"
-                            class="btn shadow-sm btn-outline-primary"
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="Capitalize Text">
-                            Capitalize</button>
-                        <button type="button"
-                            onclick="f9()"
-                            class="btn shadow-sm btn-outline-primary side"
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="Tooltip on top">
-                            Clear Text</button>
+                        <button onclick="boldText()" type="button"
+                            class="btn btn-outline-secondary">Bold</button>
+                        <button onclick="italicText()" type="button"
+                            class="btn btn-outline-secondary">Italic</button>
+                        <button onclick="leftAlignText()" type="button"
+                            class="btn btn-outline-secondary"><i
+                                class="fa-solid fa-align-left"></i></button>
+                        <button onclick="centerAlignText()" type="button"
+                            class="btn btn-outline-secondary"><i
+                                class="fa-solid fa-align-center"></i></button>
+                        <button onclick="rightAlignText()" type="button"
+                            class="btn btn-outline-secondary"><i
+                                class="fa-solid fa-align-right"></i></button>
+                        <button onclick="upperText()" type="button"
+                            class="btn btn-outline-secondary">Upper Case</button>
+                        <button onclick="lowerText()" type="button"
+                            class="btn btn-outline-secondary">Lower Case</button>
+                        <button onclick="capitalText()" type="button"
+                            class="btn btn-outline-secondary">Capitalize</button>
+                        <button onclick="upperText()" type="button"
+                            class="btn btn-outline-secondary">Upper Case</button>
+                        <button onclick="clearText()" type="button"
+                            class="btn btn-outline-secondary">Clear Text</button>
                     </div>
                 </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-md-3 col-sm-3">
-                </div>
-                <div class="col-md-6 col-sm-9">
-                    <div class="flex-box">
-                        <textarea id="textarea1"
-                            class="input shadow"
+                <!-- text area section -->
+                <div class="row">
+                    <div class="col-md-6 col-sm-9">
+                        <textarea id="textArea"
                             name="name"
                             rows="15"
-                            cols="100"
-                            placeholder="Your text here ">
+                            cols="100" placeholder="Your text here">
                         </textarea>
                     </div>
                 </div>
-                <div class="col-md-3">
-                </div>
+
             </div>
         </section>
 
-        <!--External JavaScript file-->
+        <!-- external js file -->
         <script src="./script.js"></script>
     </body>
-
 </html>
