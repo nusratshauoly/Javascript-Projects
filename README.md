@@ -1,11 +1,11 @@
 # Javascript-Projects
 
-1. Money Counting (Bank) Projects using Javascript DOM(Document Object Model)
+### Javascript DOM (Document Object Model) Projects
 
+1. Money Counting (Bank)
 [Live Site](https://money-counting.netlify.app/)
 
-2. Money Counting Using Function (DRY => Don't repeat Yourself) method use) projects using DOM(Document Object Model)
-
+2. Money Counting (Bank) 
 [Live Site](https://money-counting-dry.netlify.app/)
 
 3. Shopping Cart
@@ -13,3 +13,9 @@
 
 4. Pin Matcher
 [Live Site](https://dom-pin-matcher.netlify.app/)
+
+5. Guess my number 
+[Live Site](https://guess-my-number-js-dom.netlify.app/)
+
+6. Modal Window
+[Live Site](https://modal-window-js-dom.netlify.app/)

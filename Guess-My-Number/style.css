@@ -50,7 +50,17 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+.between {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.again {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
 .number {
   background-color: #eee;
   width: 15rem;
@@ -62,17 +72,6 @@ h1 {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
-}
-.between {
-  font-size: 1.4rem;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-}
-.again {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
 }
 .guess {
   background-color: none;
@@ -98,7 +97,6 @@ h1 {
 .btn:hover {
   background-color: #ccc;
 }
-
 .message {
   margin-bottom: 8rem;
   height: 3rem;
