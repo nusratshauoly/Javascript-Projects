@@ -41,8 +41,7 @@ input[type = 'text']{
 }
 input[type = 'text']:focus{
     background-color: #3d4153;
-    font-size: 20px;
-    
+    font-size: 20px;   
 }
 .numbers{
     margin: 30px 0;

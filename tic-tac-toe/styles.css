@@ -6,6 +6,31 @@ body{
     background-color: #548687;
     text-align: center;
 }
+.msg-container{
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* before play hide the message */
+.hide{
+  display: none;
+}
+#msg{
+  color: #ffffc7;
+  font-size: 5vmin;
+}
+#new-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #ffffff;
+    border-radius: 1rem;
+    border: none;
+}
 .container{
   height: 70vh;
   display: flex;
@@ -31,14 +56,6 @@ body{
     color: #b0413e;
     background-color: #ffffc7; 
 }
-#new-btn{
-    padding: 1rem;
-    font-size: 1.25rem;
-    background-color: #191913;
-    color: #ffffff;
-    border-radius: 1rem;
-    border: none;
-}
 #reset-btn{
     padding: 1rem;
     font-size: 1.25rem;
@@ -47,20 +64,4 @@ body{
     border-radius: 1rem;
     border: none;
 }
-#msg{
-  color: #ffffc7;
-  font-size: 5vmin;
-}
-.msg-container{
-    height: 100vmin;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 4rem;
-}
 
-/* before play hide the message */
-.hide{
-  display: none;
-}

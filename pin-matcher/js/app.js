@@ -1,7 +1,7 @@
 // ----------------- generate pin -------------------
 function getPin() {
-    const pin = generatePin();
-    const pinString = pin + '';
+    let pin = generatePin();
+    let pinString = pin + '';
     if (pinString.length === 4) {
         return pinString;
     }
@@ -10,46 +10,47 @@ function getPin() {
     }
 }
 function generatePin() {
-    const random = Math.round(Math.random() * 10000);
+    let random = Math.round(Math.random() * 10000);
     return random;
 }
 document.getElementById('generate-pin').addEventListener('click', function () {
-    const pin = getPin();
-    const displayPinField = document.getElementById('display-pin');
+    let pin = getPin();
+    let displayPinField = document.getElementById('display-pin');
     displayPinField.value = pin;
 });
 // ---------------- calculator -----------------------
 
 document.getElementById('calculator').addEventListener('click', function (event) {
-    const number = event.target.innerText;
-    const typedNumberField = document.getElementById('typed-numbers');
-    const previousTypedNumber = typedNumberField.value;
+    let number = event.target.innerText;
+    let typedNumberField = document.getElementById('typed-numbers');
+    let previousTypedNumber = typedNumberField.value;
     if (isNaN(number)) {
         if (number === 'C') {
-            previousTypedNumber.value = '';
+            // previousTypedNumber.value = '';
+            typedNumberField.value = '';
         }
         else if (number === '<') {
-            const digits = previousTypedNumber.split('');
+            let digits = previousTypedNumber.split('');
             digits.pop();
-            const remainingDigits = digits.join('');
+            let remainingDigits = digits.join('');
             typedNumberField.value = remainingDigits;
         }
     }
     else {
-        const newTypedNumber = previousTypedNumber + number;
+        let newTypedNumber = previousTypedNumber + number;
         typedNumberField.value = newTypedNumber;
     }
 });
 
 // ------------------- submit button -------------------
 document.getElementById('verify-pin').addEventListener('click', function () {
-    const displayPinField = document.getElementById('display-pin');
-    const currentPin = displayPinField.value;
-    const typedNumberField = document.getElementById('typed-numbers');
-    const typedNumber = typedNumberField.value
+    let displayPinField = document.getElementById('display-pin');
+    let currentPin = displayPinField.value;
+    let typedNumberField = document.getElementById('typed-numbers');
+    let typedNumber = typedNumberField.value
     
-    const pinSuccessMessage = document.getElementById('pin-success');
-    const pinFailureMessage = document.getElementById('pin-failure');
+    let pinSuccessMessage = document.getElementById('pin-success');
+    let pinFailureMessage = document.getElementById('pin-failure');
     if (typedNumber === currentPin) {
         pinSuccessMessage.style.display = 'block';
         pinFailureMessage.style.display = 'none';
