@@ -19,3 +19,6 @@
 
 6. Modal Window
 [Live Site](https://modal-window-js-dom.netlify.app/)
+
+7. Pick Game
+[Live Site](https://pick-game-js-dom.netlify.app/);
