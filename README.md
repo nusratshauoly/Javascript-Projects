@@ -2,6 +2,8 @@
 
 ### Javascript DOM (Document Object Model) Projects
 
+0. text editor
+
 1. Money Counting (Bank)
 [Live Site](https://money-counting.netlify.app/)
 
@@ -22,3 +24,7 @@
 
 7. Pick Game
 [Live Site](https://pick-game-js-dom.netlify.app/);
+
+8. tic tac toe
+
+9. geometry resources

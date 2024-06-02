@@ -1,4 +1,4 @@
-// deposit & withdraw field
+// deposit & withdraw input field
 function getInputFieldValueById(inputFieldId) {
     const inputField = document.getElementById(inputFieldId);
     const inputFieldValueString = inputField.value;
@@ -9,9 +9,9 @@ function getInputFieldValueById(inputFieldId) {
         return;
     }
     return inputFieldValue;
-}
+};
 
-// deposit and withdraw section
+// common deposit, withdraw, balance section
 function getTextElementValueById(textElementId) {
     const textElement = document.getElementById(textElementId);
     const textElementValueString = textElement.innerText;
@@ -19,7 +19,7 @@ function getTextElementValueById(textElementId) {
     return textElementValue;
 }
 
-// set as innerText , total deposit and balance value
+// set as innerText of total deposit, withdraw and balance value
 function setTextElementValueById(textElementId, newValue) {
     const textElement = document.getElementById(textElementId);
     textElement.innerText = newValue;
