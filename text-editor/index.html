@@ -25,29 +25,41 @@
                 <div class="row">
                     <div class="col">
                         <button onclick="boldText()" type="button"
-                            class="btn btn-outline-secondary">Bold</button>
+                            class="btn btn-outline-secondary button">Bold</button>
                         <button onclick="italicText()" type="button"
-                            class="btn btn-outline-secondary">Italic</button>
+                            class="btn btn-outline-secondary button">Italic</button>
                         <button onclick="leftAlignText()" type="button"
-                            class="btn btn-outline-secondary"><i
+                            class="btn btn-outline-secondary button"><i
                                 class="fa-solid fa-align-left"></i></button>
                         <button onclick="centerAlignText()" type="button"
-                            class="btn btn-outline-secondary"><i
+                            class="btn btn-outline-secondary button"><i
                                 class="fa-solid fa-align-center"></i></button>
                         <button onclick="rightAlignText()" type="button"
-                            class="btn btn-outline-secondary"><i
+                            class="btn btn-outline-secondary button"><i
                                 class="fa-solid fa-align-right"></i></button>
                         <button onclick="upperText()" type="button"
-                            class="btn btn-outline-secondary">Upper
+                            class="btn btn-outline-secondary button">Upper
                             Case</button>
                         <button onclick="lowerText()" type="button"
-                            class="btn btn-outline-secondary">Lower
+                            class="btn btn-outline-secondary button">Lower
                             Case</button>
                         <button onclick="capitalText()" type="button"
-                            class="btn btn-outline-secondary">Capitalize</button>
+                            class="btn btn-outline-secondary button">Capitalize</button>
                         <button onclick="clearText()" type="button"
-                            class="btn btn-outline-secondary">Clear
+                            class="btn btn-outline-secondary button">Clear
                             Text</button>
+                        <label for="text-color"
+                            class="form-label btn btn-outline-secondary button">Text
+                            Color</label>
+                        <input type="color"
+                            onchange="changeColor(this.value)"
+                            id="text-color" class="color">
+                        <label for="bg-color"
+                            class="form-label btn btn-outline-secondary button">Background
+                            Color</label>
+                        <input type="color" id="bg-color"
+                            onchange="changeBgColor(this.value)" class="color">
+
                     </div>
                 </div>
                 <!-- text area section -->

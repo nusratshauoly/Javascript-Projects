@@ -1,11 +1,12 @@
-
-document.getElementById('deposit-btn').addEventListener('click', function () {
+document.getElementById('btn-deposit').addEventListener('click', function () {
     // deposit input field
     const depositAmount = getInputFieldValueById('deposit-field');
+    
+    // // unvalid number : Check if the deposit amount is invalid or non-positive
     if (depositAmount === undefined || depositAmount <= 0) {
-        return;
+        return; // Exit the function if the deposit amount is invalid
     }
-
+    
     // previous balance of deposit total
     const previousDepositTotal = getTextElementValueById('deposit-total');
     // calculate new deposit total
@@ -15,8 +16,8 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
 
     // get previous balance total by using the function
     const previousBalanceTotal = getTextElementValueById('balance-total');
+    // get new balance total
     const newBalanceTotal = previousBalanceTotal + depositAmount;
     // set innertext of balance total value
     setTextElementValueById('balance-total', newBalanceTotal);
-})
-
+});
