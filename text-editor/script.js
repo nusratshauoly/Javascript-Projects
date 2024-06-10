@@ -1,33 +1,41 @@
 function boldText() {
-    document.getElementById('textArea').style.fontWeight = "bold";
+    const textArea = document.getElementById('textArea');
+    textArea.style.fontWeight = "bold";
 }
 
 function italicText() {
-    document.getElementById('textArea').style.fontStyle = "italic";
+    const textArea = document.getElementById('textArea');
+    textArea.style.fontStyle = "italic";
 }
 
 function leftAlignText() {
-    document.getElementById('textArea').style.textAlign = "left";
+    const textArea = document.getElementById('textArea');
+    textArea.style.textAlign = "left";
 }
 
 function centerAlignText() {
-    document.getElementById('textArea').style.textAlign = "center";
+    const textArea = document.getElementById('textArea');
+    textArea.style.textAlign = "center";
 }
 
 function rightAlignText() {
-    document.getElementById('textArea').style.textAlign = "right";
+    const textArea = document.getElementById('textArea');
+    textArea.style.textAlign = "right";
 }
 
 function upperText() {
-    document.getElementById('textArea').style.textTransform = "uppercase";
+    const textArea = document.getElementById('textArea');
+    textArea.style.textTransform = "uppercase";
 }
 
 function lowerText() {
-    document.getElementById('textArea').style.textTransform = "lowercase";
+    const textArea = document.getElementById('textArea');
+    textArea.style.textTransform = "lowercase";
 }
 
 function capitalText() {
-    document.getElementById('textArea').style.textTransform = "capitalize";
+    const textArea = document.getElementById('textArea');
+    textArea.style.textTransform = "capitalize";
 }
 
 function changeColor(color) {
@@ -41,11 +49,11 @@ function changeBgColor(color) {
 }
 
 function clearText() {
-    document.getElementById('textArea').style.fontWeight = 'normal';
-    document.getElementById('textArea').style.fontStyle = 'normal';
-    document.getElementById('textArea').style.textAlign = 'left';
-    document.getElementById('textArea').style.textTransform = 'capitalize';
-    document.getElementById('textArea').value = " ";
-    document.getElementById('text-color').style.color = ''; // Reset color to default
-    document.getElementById('bg-color').style.backgroundColor = ''; // Reset background color to default
+    textArea.style.fontWeight = 'normal';
+    textArea.style.fontStyle = 'normal';
+    textArea.style.textAlign = 'left';
+    textArea.style.textTransform = 'capitalize';
+    textArea.value = " ";
+    textArea.style.color = ''; // Reset color to default
+    textArea.style.backgroundColor = ''; // Reset background color to default
 }
