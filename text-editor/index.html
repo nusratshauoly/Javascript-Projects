@@ -45,20 +45,26 @@
                             Case</button>
                         <button onclick="capitalText()" type="button"
                             class="btn btn-outline-secondary button">Capitalize</button>
-                        <button onclick="clearText()" type="button"
-                            class="btn btn-outline-secondary button">Clear
-                            Text</button>
+
+                        <!-- text color -->
                         <label for="text-color"
                             class="form-label btn btn-outline-secondary button">Text
                             Color</label>
                         <input type="color"
                             onchange="changeColor(this.value)"
                             id="text-color" class="color">
+
+                        <!-- background color -->
                         <label for="bg-color"
                             class="form-label btn btn-outline-secondary button">Background
                             Color</label>
                         <input type="color" id="bg-color"
                             onchange="changeBgColor(this.value)" class="color">
+
+                        <!-- clear text -->
+                        <button onclick="clearText()" type="button"
+                            class="btn btn-outline-secondary button">Clear
+                            Text</button>
 
                     </div>
                 </div>
