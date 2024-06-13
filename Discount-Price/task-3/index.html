@@ -1,1 +1,38 @@
-<!-- একটা ওয়েবসাইট এ একটা input ফিল্ড থাকবে। তার সাথে একটা বাটন থাকবে double নামে। তুমি ইনপুট ফিল্ড এ যদি কোন সংখ্যা লিখো তাহলে নিচে সেই সংখ্যা ডাবল করে দেখাবে। আরেকটা বাটন থাকবে triple নামে। সেটাতে ক্লিক করলে ইনপুট ফিল্ড এ যে সংখ্যা আছে সেটা তিনগুণ হয়ে যাবে। সেই সংখ্যা নিচে দেখাবে। আর যদি ইনপুট ফিল্ড এ সংখ্যা ছাড়া কোন কথা লিখে তাহলে একটা এলার্ট (alert) দিয়ে বলবে Please enter a number। -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Counting Numbers</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    </head>
+    <body>
+        <!-- একটা ওয়েবসাইট এ একটা input ফিল্ড থাকবে। তার সাথে একটা বাটন থাকবে double নামে। তুমি ইনপুট ফিল্ড এ যদি কোন সংখ্যা লিখো তাহলে নিচে সেই সংখ্যা ডাবল করে দেখাবে। আরেকটা বাটন থাকবে triple নামে। সেটাতে ক্লিক করলে ইনপুট ফিল্ড এ যে সংখ্যা আছে সেটা তিনগুণ হয়ে যাবে। সেই সংখ্যা নিচে দেখাবে। আর যদি ইনপুট ফিল্ড এ সংখ্যা ছাড়া কোন কথা লিখে তাহলে একটা এলার্ট (alert) দিয়ে বলবে Please enter a number। -->
+
+        <section
+            class="h-screen w-full bg-amber-600 flex items-center justify-center">
+            <div
+                class="w-3/5 h-3/5 bg-white rounded-md p-8 text-center">
+                <p class="text-2xl">Enter a number: <input type="text"
+                        placeholder="Enter Your Number" id="input-number"
+                        class="border-2 border-amber-600 mb-2 px-2 text-base"></p>
+
+                <button id="double-btn"
+                    class="bg-orange-400 text-white px-5 py-2 rounded-md m-2">Double</button>
+                <button id="triple-btn"
+                    class="bg-red-400 text-white px-5 py-2 rounded-md m-2">Triple</button>
+
+                <p class="mt-4 text-2xl">Calculate Number: <span
+                        id="calculate-number"></span></p>
+
+            </div>
+
+        </section>
+
+        <!-- ------  external js ------- -->
+        <!-- <script src="./index.js"></script> -->
+        <script src="./js/utilities.js"></script>
+
+    </body>
+</html>
