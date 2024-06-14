@@ -2,6 +2,7 @@
 document.getElementById('double-btn').addEventListener('click', function () {
     const inputNumberElement = document.getElementById('input-number');
     const inputNumber = parseFloat(inputNumberElement.value);
+    inputNumberElement.value = '';
    
 
    if (isNaN(inputNumber)){
@@ -14,7 +15,7 @@ document.getElementById('double-btn').addEventListener('click', function () {
     const calculateNumberElement = document.getElementById('calculate-number');
     const calculateNumber = parseFloat(calculateNumberElement.textContent);
     calculateNumberElement.textContent = doubleNumber;
-    inputNumberElement.value = '';
+    
 })
 
 
