@@ -16,7 +16,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     const previousWithdrawTotalString = withdrawTotal.innerText;
     const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
     const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
-    withdrawTotal.innerText = currentWithdrawTotal;
+    
 
     // balance total
     const balanceTotal = document.getElementById('balance-total');
@@ -28,6 +28,9 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
         alert("Your Account doesn't have sufficient balance");
         return;
     }
+
+    // set total withdraw value
+    withdrawTotal.innerText = currentWithdrawTotal;
     
     // total balance after withdrawing
     const currentBalanceTotal = previousBalanceTotal - newWithdrawAmount;
