@@ -1,4 +1,14 @@
+// ----- ---------- first half -------- -------
+
 // ----------------- generate pin -------------------
+
+// Helper function to generate a random number up to 10000
+function generatePin() {
+    let random = Math.round(Math.random() * 10000); // Generate a random number between 0 and 9999
+    return random;
+}
+
+
 // Function to generate a 4-digit PIN
 function getPin() {
     let pin = generatePin(); // Generate a random number
@@ -11,18 +21,16 @@ function getPin() {
     }
 }
 
-// Helper function to generate a random number up to 10000
-function generatePin() {
-    let random = Math.round(Math.random() * 10000); // Generate a random number between 0 and 9999
-    return random;
-}
-
 // Event listener for the button to generate a PIN
 document.getElementById('generate-pin').addEventListener('click', function () {
     let pin = getPin(); // Get a 4-digit PIN
     let displayPinField = document.getElementById('display-pin'); // Get the display field element
     displayPinField.value = pin; // Display the generated PIN in the field
 });
+
+
+
+//  -------- --------- second half ---------- ---------
 
 // ---------------- calculator -----------------------
 
