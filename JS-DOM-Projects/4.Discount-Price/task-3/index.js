@@ -1,3 +1,5 @@
+// ------------- details solution ----------------
+
 // ----------- double btn ------------
 document.getElementById('double-btn').addEventListener('click', function () {
     const inputNumberElement = document.getElementById('input-number');

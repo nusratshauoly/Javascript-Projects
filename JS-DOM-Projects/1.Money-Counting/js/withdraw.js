@@ -9,6 +9,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     // if enter invalid amount
     if (isNaN(newWithdrawAmount)) {
         alert('Please enter a valid number!!!');
+        return;
     }
 
     // withdraw total

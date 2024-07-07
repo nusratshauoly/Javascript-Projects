@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Money Master</title>
+        <!-- tailwind css link -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <section class="container p-10 mx-auto">
+            <h1 class="text-center text-4xl text-blue-500 font-bold">Money
+                Master 💰</h1>
+            <div class="row mt-7">
+                <div
+                    class="flex fex-col-12 md:flex-col-6 lg:flex-col-6 gap-6">
+
+                    <!-- first part -->
+                    <div
+                        class="w-full h-full">
+                        <img src="./wallet-and-money.webp" alt="image of money">
+                    </div>
+
+                    <!-- second part -->
+                    <div class="w-full bg-gray-100 p-4 rounded-sm">
+                        <!-- income -->
+                        <div class="mx-auto">
+                            <h3
+                                class="text-center mb-1 text-xl">Income</h3>
+                            <label for="income-field">Income: </label>
+                            <input type="text" id="income-field"
+                                placeholder="Income" class="px-3 py-1 mx-1">
+                        </div>
+
+                        <!-- Expenses -->
+                        <div>
+                            <h3 class="text-center mt-3 text-xl">Expenses</h3>
+                            <!-- food -->
+                            <label for="food-field">Food: </label>
+                            <input type="text" id="food-field"
+                                placeholder="Food Expenses"
+                                class="w-9/11 px-3 py-1 mx-1 my-2">
+                            <br>
+                            <!-- rent -->
+                            <label for="rent-field">Rent: </label>
+                            <input type="text" id="rent-field"
+                                placeholder="Rent Expenses"
+                                class="w-9/11 px-3 py-1 mx-1 my-2">
+                            <br>
+
+                            <!-- cloths -->
+                            <label for="cloths-field">cloths: </label>
+                            <input type="text" id="cloths-field"
+                                placeholder="Cloth Expenses"
+                                class="w-9/11 px-3 py-1 mx-1 my-2">
+                            <br>
+
+                            <!-- calculate -->
+                            <button type="button"
+                                id="calculate"
+                                class="text-center rounded-md bg-sky-500 text-white font-medium px-4 py-2">Calculate</button>
+
+                            <h3 class="mb-2 mt-3 text-xl">Total
+                                Expenses: <span
+                                    id="total-expenses"></span></h3>
+
+                            <h3 class="mb-4 mt-3 text-xl">Balance:
+                                <span
+                                    id="balance"></span></h3>
+                        </div>
+
+                        <!-- save -->
+                        <div>
+                            <div class="flex">
+                                <label for="save-field"
+                                    class="text-xl">Save:
+                                </label>
+                                <input type="text" id="save-field"
+                                    class="mr-2 w-20 ml-3 px-3 rounded-sm"
+                                    placeholder="Save">
+                                <p>%</p>
+                                <button id="save-button"
+                                    class="ml-2 text-center p-2 rounded-md bg-sky-500 text-white font-medium ">Save</button>
+                            </div>
+                            <h3 class="text-xl mt-4">Saving Amount:
+                                <span
+                                    id="save-amount"></span></h3>
+
+                            <h3 class="text-xl mt-4">Remaining
+                                Balance: <span
+                                    id="remaining-balance"></span></h3>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- external js link -->
+        <script src="./js/utilities.js"></script>
+        <script src="./js/index.js"></script>
+
+    </body>
+</html>

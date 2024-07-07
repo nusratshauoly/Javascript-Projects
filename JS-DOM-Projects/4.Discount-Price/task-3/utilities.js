@@ -20,3 +20,4 @@ function calculate(multiplier) {
 // Attach event listeners
 doubleBtn.addEventListener('click', () => calculate(2));
 tripleBtn.addEventListener('click', () => calculate(3));
+
