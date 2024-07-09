@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Geometry Genius</title>
+        <!-- css link -->
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- daisy ui cdn -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+            rel="stylesheet" type="text/css" />
+        <!-- tailwind css -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/f4b191b67e.js"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="mx-10 my-10 bg-sky-100 p-3 rounded-md">
+            <!-- responsive (dropdown menu on small screen, center menu on large screen) from daisyUI -->
+            <div class="navbar">
+                <div class="navbar-start">
+                    <p class="text-3xl font-bold">Geometry Genius</p>
+                </div>
+
+                <div class="navbar-end">
+                    <a
+                        class="btn btn-primary text-white btn-md px-10 text-base font-bold hover:bg-blue-400">Blog</a>
+                </div>
+            </div>
+
+        </header>
+
+        <main>
+            <!-- ------------ ****  main container ***** -------- -->
+            <!-- ----- - - - - - first row - - - - - ---- -->
+            <div class="flex flex-col lg:flex-row mt-24 ml-6 mr-6">
+
+                <!-- -------- ***** shape container ***** -------- -->
+                <!-- (flex-1) uses for it will spand and shrink as per screen size -->
+                <div
+                    class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- ----- triangle card ---- (card) from (daisy UI) -->
+                    <!-- remove fixed width (w-96) -->
+                    <div
+                        class="card bg-base-100 shadow-xl hover:bg-blue-200">
+                        <figure>
+                            <img
+                                src="./images/triangle.png"
+                                alt="Triangle" class="p-10" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Triangle</h2>
+                            <p>Area (A) = 0.5 X b X h</p>
+                            <p>
+                                <!-- triangle base input -->
+                                <!--1. data validation : input e number chara onno kichu na likhar jonno . way 1: input type='number' -->
+                                <input type="number"
+                                    class="border bg-gray-100  text-xl w-24 px-2"
+                                    placeholder="base" id="triangle-base">
+                                <span class="ml-2">cm</span>
+
+                                <!-- triangle height input -->
+                                <input type="number"
+                                    class="ml-4 border bg-gray-100  text-xl w-24 px-2"
+                                    placeholder="height" id="triangle-height">
+                                <span class="ml-2">cm</span>
+                            </p>
+
+                            <p class="text-2xl">Area: <span
+                                    id="triangle-area"
+                                    class="font-bold">0</span>
+                                cm<sup>2</sup></p>
+
+                            <!-- remove (justify-end) -->
+                            <div class="card-actions">
+                                <button onclick="calculateTriangleArea()"
+                                    class="btn btn-primary w-full uppercase">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ----- rectangle card ---- (card) from (daisy UI) -->
+                    <div class="card bg-base-100 shadow-xl hover:bg-pink-200">
+                        <figure>
+                            <img
+                                src="./images/rectangle.png"
+                                alt="Rectangle" class="p-10" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Rectangle</h2>
+                            <p>Area (A) = w X l</p>
+                            <p>
+                                <!-- rectangle width input -->
+                                <input type="text"
+                                    class="border bg-gray-100  text-xl w-24 px-2"
+                                    placeholder="width" id="rectangle-width">
+                                <span class="ml-2">cm</span>
+
+                                <!-- rectangle length input -->
+                                <input type="text"
+                                    class="ml-4 border bg-gray-100  text-xl w-24 px-2"
+                                    placeholder="length" id="rectangle-length">
+                                <span class="ml-2">cm</span>
+                            </p>
+
+                            <p class="text-2xl">Area: <span
+                                    id="rectangle-area"
+                                    class="font-bold">0</span>
+                                cm<sup>2</sup></p>
+
+                            <!-- remove (justify-end) -->
+                            <div class="card-actions">
+                                <button onclick="calculateRectangleArea()"
+                                    class="btn btn-primary  w-full uppercase">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ----- Parallelogram card ---- (card) from (daisy UI) -->
+                    <div class="card bg-base-100 shadow-xl hover:bg-teal-200">
+                        <figure>
+                            <img
+                                src="./images/parallelogram.png"
+                                alt="Rectangle" class="p-10" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Parallelogram</h2>
+                            <p>Area (A) = b X h</p>
+                            <p>
+                                <!-- Parallelogram base input -->
+                                <input type="text"
+                                    class="border bg-gray-100  text-xl w-24 px-2"
+                                    placeholder="base" id="parallelogram-base">
+                                <span class="ml-2">cm</span>
+
+                                <!-- Parallelogram height input -->
+                                <input type="text"
+                                    class="ml-4 border bg-gray-100  text-xl w-24 px-2"
+                                    placeholder="height"
+                                    id="parallelogram-height">
+                                <span class="ml-2">cm</span>
+                            </p>
+
+                            <p class="text-2xl">Area: <span
+                                    id="parallelogram-area"
+                                    class="font-bold">0</span>
+                                cm<sup>2</sup></p>
+
+                            <!-- remove (justify-end) -->
+                            <div class="card-actions">
+                                <button onclick="calculateParallelogramArea()"
+                                    class="btn btn-primary  w-full uppercase">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ------------- ***** area calculator ***** --------- -->
+
+                    <div
+                        class="p-10 card bg-base-100 shadow-xl hover:bg-indigo-200">
+                        <div class="text-4xl">Area Calculator</div>
+                        <div id="calculation-entry"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ------ - - - - - - second row - - - - - - ------ -->
+            <div class="flex flex-col lg:flex-row mt-20 ml-6 mr-6">
+
+                <!-- -------- *****  shape container ***** -------- -->
+                <!-- (flex-1) uses for it will spand and shrink as per screen size -->
+                <div
+                    class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- ----- Rhombus card ---- (card) from (daisy UI) -->
+                    <div class="card bg-base-100 shadow-xl hover:bg-gray-200">
+                        <figure>
+                            <img
+                                src="./images/rhombus.png"
+                                alt="Rhombus" class="p-10" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Rhombus</h2>
+                            <p>Area (A) = 0.5 X d<sub>1</sub> X
+                                d<sub>2</sub></p>
+                            <p>
+                                <!-- Rhombus diagonals 1 input -->
+                                <input type="text"
+                                    class="border bg-gray-100  text-xl w-24 px-2"
+                                    placeholder="diagonals 1"
+                                    id="rhombus-diagonals-1">
+                                <span class="ml-2">cm</span>
+
+                                <!-- Rhombus diagonals 1 input -->
+                                <input type="text"
+                                    class="ml-4 border bg-gray-100  text-xl w-24 px-2"
+                                    placeholder="diagonals 2"
+                                    id="rhombus-diagonals-2">
+                                <span class="ml-2">cm</span>
+                            </p>
+
+                            <p class="text-2xl">Area: <span
+                                    id="rhombus-area"
+                                    class="font-bold">0</span>
+                                cm<sup>2</sup></p>
+
+                            <!-- remove (justify-end) -->
+                            <div class="card-actions">
+                                <button onclick="calculateRhombusArea()"
+                                    class="btn btn-primary  w-full uppercase">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ----- Pentagon card ---- (card) from (daisy UI) -->
+                    <div
+                        class="card bg-base-100 shadow-xl hover:bg-fuchsia-200">
+                        <figure>
+                            <img
+                                src="./images/pentagon.png"
+                                alt="Pentagon" class="p-10" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Pentagon</h2>
+                            <p>Area (A) = 0.5 X p X b</p>
+                            <p>
+                                <!-- pentagon penta input -->
+                                <input type="text"
+                                    class="border bg-gray-100  text-xl w-24 px-2"
+                                    placeholder="penta" id="pentagon-penta">
+                                <span class="ml-2">cm</span>
+
+                                <!-- pentagon angles input -->
+                                <input type="text"
+                                    class="ml-4 border bg-gray-100  text-xl w-24 px-2"
+                                    placeholder="angles" id="pentagon-angles">
+                                <span class="ml-2">cm</span>
+                            </p>
+
+                            <p class="text-2xl">Area: <span
+                                    id="pentagon-area"
+                                    class="font-bold">0</span>
+                                cm<sup>2</sup></p>
+
+                            <!-- remove (justify-end) -->
+                            <div class="card-actions">
+                                <button onclick="calculatePentagonArea()"
+                                    class="btn btn-primary  w-full uppercase">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ----- Ellipse card ---- (card) from (daisy UI) -->
+                    <div class="card bg-base-100 shadow-xl hover:bg-orange-200">
+                        <figure>
+                            <img
+                                src="./images/ellipse.png"
+                                alt="Ellipse" class="p-10" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Ellipse</h2>
+                            <p>Area (A) = πab</p>
+                            <p>
+                                <!-- Ellipse major axis(a) input -->
+                                <input type="text"
+                                    class="border bg-gray-100  text-xl w-24 px-2"
+                                    placeholder="Ellipse major axis"
+                                    id="ellipse-major-axis">
+                                <span class="ml-2">cm</span>
+
+                                <!-- Ellipse minor axis(b) input -->
+                                <input type="text"
+                                    class="ml-4 border bg-gray-100  text-xl w-24 px-2"
+                                    placeholder="Ellipse minor axis"
+                                    id="ellipse-minor-axis">
+                                <span class="ml-2">cm</span>
+                            </p>
+
+                            <p class="text-2xl">Area: <span
+                                    id="ellipse-area"
+                                    class="font-bold">0</span>
+                                cm<sup>2</sup></p>
+
+                            <!-- remove (justify-end) -->
+                            <div class="card-actions">
+                                <button onclick="calculateEllipseArea()"
+                                    class="btn btn-primary  w-full uppercase">Calculate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- external js -->
+        <script src="./scripts/reusable-function.js"></script>
+        <script src="./scripts/using-duplicate.js"></script>
+
+        <!-- first row area calculator in a details way (can be used in reusable way, just to experience both type ofway)  -->
+        <script src="./scripts/area-calculator.js"></script>
+    </body>
+</html>

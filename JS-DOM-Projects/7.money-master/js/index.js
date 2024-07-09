@@ -29,8 +29,10 @@ document.getElementById('save-button').addEventListener('click', function () {
 
     const savingAmount = (balance * saveField) / 100;
     setTextElementValueById('save-amount', savingAmount);
-    const remainingBalance = balance - savingAmount;
+    const remainingBalance = balance + savingAmount;
     setTextElementValueById('remaining-balance', remainingBalance);
+    // const remainingBalance = balance - savingAmount;
+    // setTextElementValueById('remaining-balance', remainingBalance);
 
 })
 
