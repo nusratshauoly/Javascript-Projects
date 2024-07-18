@@ -1,14 +1,25 @@
+// first row area calculator in a details way (can be used in reusable way, just to experience both type ofway)------------------------- area calculation using detailed way -----------------
+
 // --------- triangle ----------
 function calculateTriangleArea() {
     // get triangle base value
     const baseField = document.getElementById('triangle-base');
     const baseValueText = baseField.value;
     const base = parseFloat(baseValueText);
+    baseField.value = '';
 
     // get triangle height value
     const heightField = document.getElementById('triangle-height');
     const heightValueText = heightField.value;
     const height = parseFloat(heightValueText);
+    heightField.value = '';
+
+    // validate input: width and length : data validation : input e number chara onno kichu na likhar jonno . way 2: using (isNaN)
+    if (isNaN(base) || isNaN(height)) {
+        alert('Please insert a number');
+        // alert show korar por kono output na dekhanor jonno (return) korbo.
+        return;
+    }
 
     // triangle area
     const area = 0.5 * base * height;
@@ -17,7 +28,7 @@ function calculateTriangleArea() {
     const areaSpan = document.getElementById('triangle-area');
     areaSpan.innerText = area;
 
-    // call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
+    // from{reusable-function.js => function addToCalculationEntry(areaType, area)} call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
     addToCalculationEntry('Triangle', area);
 }
 
@@ -48,7 +59,7 @@ function calculateRectangleArea() {
     const areaSpan = document.getElementById('rectangle-area');
     areaSpan.innerText = area;  
 
-    // call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
+    // from{reusable-function.js => function addToCalculationEntry(areaType, area)} call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
     addToCalculationEntry('Rectangle', area);
 }
 
@@ -79,7 +90,7 @@ function calculateParallelogramArea() {
     const areaSpan = document.getElementById('parallelogram-area');
     areaSpan.innerText = area;
 
-    // call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
+    // from{reusable-function.js => function addToCalculationEntry(areaType, area)} call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
     addToCalculationEntry('Parallelogram', area);
 
 }

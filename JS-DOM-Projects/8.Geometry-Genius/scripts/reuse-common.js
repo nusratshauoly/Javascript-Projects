@@ -19,7 +19,7 @@ function calculateRhombusArea() {
     setElementInnerText('rhombus-area', area);
  
 
-    // call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
+    // from{reusable-function.js => function addToCalculationEntry(areaType, area)} call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
     addToCalculationEntry('Rhombus', area);
 }
 
@@ -41,7 +41,7 @@ function calculatePentagonArea() {
     const area = 0.5 * pentagon * angles;
     setElementInnerText('pentagon-area', area); 
 
-    // call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
+    // from{reusable-function.js => function addToCalculationEntry(areaType, area)} call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
     addToCalculationEntry('Pentagon', area);
 }
 
@@ -67,6 +67,6 @@ function calculateEllipseArea() {
     setElementInnerText('ellipse-area', areaTwoDecimal); 
     
 
-    // call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
+    // from{reusable-function.js => function addToCalculationEntry(areaType, area)} call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
     addToCalculationEntry('Ellipse', areaTwoDecimal);
 }

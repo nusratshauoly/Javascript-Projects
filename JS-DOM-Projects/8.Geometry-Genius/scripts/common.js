@@ -6,6 +6,7 @@ function getInputValue(fieldId) {
     const inputField = document.getElementById(fieldId);
     const inputValueText = inputField.value;
     const value = parseFloat(inputValueText);
+    inputField.value = '';
 
     // jokhon jei different function call korbe tokhon value return korbe 
     return value;
@@ -32,6 +33,11 @@ function setElementInnerText(elementId, area) {
     5. append the created element as a child of the parent
 */
 
+
+
+
+
+// first row last card to show area calculate
 function addToCalculationEntry(areaType, area) {
     console.log(areaType + ' ' + area);
     // get the element where you want to add the dynamic HTML
