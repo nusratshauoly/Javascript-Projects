@@ -6,12 +6,11 @@ function calculateRhombusArea() {
     const diagonals2 = getInputValue('rhombus-diagonals-2');
     // console.log(diagonals1);
 
-    // validate 
-    if (isNaN(diagonals1) || isNaN(diagonals2)) {
-        alert('Please insert a number');
-        // alert show korar por kono output na dekhanor jonno (return) korbo.
+    // Validate inputs (condition to put valid number to the input fieled)
+    if (!validateInputs(diagonals1, diagonals2)) {
         return;
     }
+
 
     // show rhombus area
     const area = 0.5 * diagonals1 * diagonals2;
@@ -19,7 +18,7 @@ function calculateRhombusArea() {
     setElementInnerText('rhombus-area', area);
  
 
-    // from{reusable-function.js => function addToCalculationEntry(areaType, area)} call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
+    // from{common.js => function addToCalculationEntry(areaType, area)} call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
     addToCalculationEntry('Rhombus', area);
 }
 
@@ -30,10 +29,8 @@ function calculatePentagonArea() {
     const angles = getInputValue('pentagon-angles');
     // console.log(angles);
 
-    // validate 
-    if (isNaN(pentagon) || isNaN(angles)) {
-        alert('Please insert a number');
-        // alert show korar por kono output na dekhanor jonno (return) korbo.
+    // Validate inputs (condition to put valid number to the input fieled)
+    if (!validateInputs(pentagon, angles)) {
         return;
     }
 
@@ -41,7 +38,7 @@ function calculatePentagonArea() {
     const area = 0.5 * pentagon * angles;
     setElementInnerText('pentagon-area', area); 
 
-    // from{reusable-function.js => function addToCalculationEntry(areaType, area)} call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
+    // from{common.js => function addToCalculationEntry(areaType, area)} call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
     addToCalculationEntry('Pentagon', area);
 }
 
@@ -53,10 +50,8 @@ function calculateEllipseArea() {
     const minorAxis = getInputValue('ellipse-minor-axis');
     // console.log(minorAxis);
 
-    // validate 
-    if (isNaN(majorAxis) || isNaN(minorAxis)) {
-        alert('Please insert a number');
-        // alert show korar por kono output na dekhanor jonno (return) korbo.
+    // Validate inputs (condition to put valid number to the input fieled)
+    if (!validateInputs(majorAxis, minorAxis)) {
         return;
     }
 
@@ -67,6 +62,6 @@ function calculateEllipseArea() {
     setElementInnerText('ellipse-area', areaTwoDecimal); 
     
 
-    // from{reusable-function.js => function addToCalculationEntry(areaType, area)} call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
+    // from{common.js => function addToCalculationEntry(areaType, area)} call function of (area calculator) and give (areaType => name of the shape, area => area calculation)  add to calculation entry
     addToCalculationEntry('Ellipse', areaTwoDecimal);
 }

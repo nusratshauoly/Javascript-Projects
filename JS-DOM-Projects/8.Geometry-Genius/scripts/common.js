@@ -13,6 +13,23 @@ function getInputValue(fieldId) {
 }
 
 
+// reusable function to validate inputs
+function validateInputs(...values) {  // { The ...values syntax (known as the rest parameter) allows the function to accept any number of arguments and stores them in an array-like structure called values.}
+    // Start a for loop to iterate over each value in the values array
+    for (let value of values) {
+        // Check if the current value is not a number
+        if (isNaN(value)) {
+            // Display an alert message if the value is not a number
+            alert('Please insert a number');
+            // Return false to indicate validation failure and stop further execution
+            return false;
+        }
+    }
+    // Return true to indicate all values are valid numbers
+    return true;
+}
+
+
 // ----- reusable set (span, p, div, etc) InnerText in calculate area
 
 // (elementId) parameter is for to set the id of (calculate area) of different things
@@ -33,13 +50,9 @@ function setElementInnerText(elementId, area) {
     5. append the created element as a child of the parent
 */
 
-
-
-
-
 // first row last card to show area calculate
 function addToCalculationEntry(areaType, area) {
-    console.log(areaType + ' ' + area);
+    // console.log(areaType + ' ' + area);
     // get the element where you want to add the dynamic HTML
     const calculationEntry = document.getElementById('calculation-entry');
 
