@@ -1,0 +1,5 @@
+1. Declare Secret number: ?, score, highscore
+2. Display Message function
+3. check button: guess, condition -> score, highscore
+    -> display message for win and fail
+4. Again button

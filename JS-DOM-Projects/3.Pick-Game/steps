@@ -1,0 +1,23 @@
+1. set in querySelector to every class and id's.
+2. set a new variables without assigning any value;
+3. set a function to start a new game and set every score to 0
+
+- hide the winner message
+- hide the dice
+- add player1 as active player and remove active player2
+
+4. call the new player function
+5. set a function as switchPlayer
+
+- reset current player
+- reset current player score
+
+6. addEventlistener on (btnRoll) button and set Math.random to dice and show after clicking (btnRoll) button.
+
+- set if condition if (dice is not 1) then can continue play and if 1 appear switch the player
+
+7. addEventListener to button hold functionality, update the score of the the current player
+
+- set if condition if score is >= 100 finish the game or continue the game.
+
+8. setting addEventListener to (newGame) button.

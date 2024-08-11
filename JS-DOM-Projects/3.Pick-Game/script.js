@@ -95,7 +95,7 @@ btnHold.addEventListener('click', function () {
 // setting the new geme
 btnNew.addEventListener('click', newGame);
 
-// ----------------------------- comment in code ----------------------------
+// //----------------------------- comment in code ----------------------------
 
 // ('use strict');
 

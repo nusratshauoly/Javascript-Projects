@@ -1,0 +1,6 @@
+1. declare the class variables in (querySelector)
+2. set (openModal) function to remove hide class
+3. set (closeModal) function to add hide class
+4. set a for loop for click every (openModal, closeModal, overlay) button
+5. set a if condition so that if type (Escape) and modal doesnot contain
+(hidden) class then we can close the overlay modal

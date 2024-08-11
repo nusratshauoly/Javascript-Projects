@@ -27,7 +27,7 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-// -------------------------  comment in code -----------------------------
+// // -------------------------  comment in code -----------------------------
 
 // ('use strict'); // Enforces strict mode which helps catch common coding errors
 
