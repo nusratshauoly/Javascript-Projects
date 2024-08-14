@@ -1,3 +1,7 @@
+---- how the project works.............
+1. type a random number in (guess) input field and click the check button, if number matched on the secret number, new message will appear and if guess number don't matched with secret number, have to click until match and and the score number will reduce 1 by 1. if the guess is = 20 and couldnot find the number then 'you loss' new message will appear. and if we find the secret number, what will be the highscore, it will remain in the next game. 
+
+
 1. Declare Secret number: ?, score, highscore
 2. Display Message function
 3. check button: guess, condition -> score, highscore

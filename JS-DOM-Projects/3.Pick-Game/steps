@@ -1,3 +1,12 @@
+-- Proces of the game
+
+1. when a new game start dice is hidden
+2. player 1 in active player mode
+3. when (roll dice) button clicked play start and dice appear
+4. every player gets 1 round to play , after rolling dice the number will appear in the (current) number section press the hold button to save the number in players account and switch the player , if the number is 100 or more then 100, the winner apper
+
+---
+
 1. set in querySelector to every class and id's.
 2. set a new variables without assigning any value;
 3. set a function to start a new game and set every score to 0
