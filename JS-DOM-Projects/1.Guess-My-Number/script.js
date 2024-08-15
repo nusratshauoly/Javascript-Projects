@@ -138,3 +138,59 @@ document.querySelector('.again').addEventListener('click', function () {
 //   document.querySelector('body').style.backgroundColor = '#222'; // Reset the background color to dark gray
 //   document.querySelector('.number').style.width = '15rem'; // Reset the number display width
 // });
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// ------------------------------------- dry method ---------------------------------------
+
+// let secretNumber = Math.trunc(Math.random() * 20) + 1;
+// let score = 20;
+// let highScore = 0;
+
+// let documentBody = document.querySelector('body');
+// let againBtn = document.querySelector('.again');
+// let unknownNumber = document.querySelector('.number');
+// let guessNumber = document.querySelector('.guess');
+// let checkBtn = document.querySelector('.check');
+// let messageShow = document.querySelector('.message');
+// let scoreNumber = document.querySelector('.score');
+// let highScoreNumber = document.querySelector('.highscore');
+
+// let displayMessage = function (message) {
+//   messageShow.textContent = message;
+// };
+
+// checkBtn.addEventListener('click', function () {
+//   let guess = Number(guessNumber.value);
+//   if (!guess) {
+//     displayMessage('⛔️ No Number');
+//   } else if (guess === secretNumber) {
+//     displayMessage('💥 Number Matched...');
+//     unknownNumber.textContent = secretNumber;
+//     unknownNumber.style.width = '30rem';
+//     documentBody.style.backgroundColor = '#60b347';
+
+//     if (score > highScore) {
+//       highScore = score;
+//       highScoreNumber.textContent = highScore;
+//     }
+//   } else if (guess !== secretNumber) {
+//     displayMessage(guess > secretNumber ? '📈 too high' : '📉 too low');
+//     score--;
+//     scoreNumber.textContent = score;
+//   } else {
+//     displayMessage('❌ you lost the game');
+//     scoreNumber.textContent = 0;
+//   }
+// });
+
+// againBtn.addEventListener('click', function () {
+//   secretNumber = Math.trunc(Math.random() * 20) + 1;
+//   score = 20;
+//   displayMessage('Start guessing...');
+//   unknownNumber.textContent = '?';
+//   unknownNumber.style.width = '15rem';
+//   documentBody.style.backgroundColor = '#222';
+//   scoreNumber.textContent = score;
+//   guessNumber.value = '';
+// });

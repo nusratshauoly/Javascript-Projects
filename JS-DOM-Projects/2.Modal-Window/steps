@@ -1,3 +1,9 @@
+
+1. if click any of threebutton an overlay pop up , we can close the overlay by click vlose button or press(esc) button on keyboard. 
+
+
+
+
 1. declare the class variables in (querySelector)
 2. set (openModal) function to remove hide class
 3. set (closeModal) function to add hide class
