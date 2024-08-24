@@ -29,12 +29,18 @@ function setBackgroundColorById(elementId) {
     element.classList.add('bg-orange-400');
 }
 
-// removeBackgroundColorById from keyboard which  will appear on the screen 
+// removeBackgroundColorById from keyboard which will appear on the screen 
 function removeBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
     element.classList.remove('bg-orange-400');
 }
 
+// Function to get the text content of an element by its ID
+function getElementTextById(elementId){
+    const element = document.getElementById(elementId);
+    const text = element.innerText;
+    return text;
+}
 
 // update score
 function getTextElementValueById(elementId){
@@ -50,31 +56,26 @@ function setTextElementValueById(elementId, value){
     element.innerText = value;
 }
 
-// 
-function getElementTextById(elementId){
-    const element = document.getElementById(elementId);
-    const text = element.innerText;
-    return text;
-}
+
 
 
 
 // // ---------------------------------- with comment -------------------------
 
 
-// // common function to hidden content
+// // 27.6: common function to hidden content
 // function hideElementById(elementId) { // Function to hide an HTML element by its ID
 //     const element = document.getElementById(elementId); // Get the element from the DOM using its ID
 //     element.classList.add('hidden'); // Add the 'hidden' class to the element, which hides it from view
 // }
 
-// // common function to show content
+// // 27.6: common function to show content
 // function showElementById(elementId) { // Function to show an HTML element by its ID
 //     const element = document.getElementById(elementId); // Get the element from the DOM using its ID
 //     element.classList.remove('hidden'); // Remove the 'hidden' class from the element, making it visible
 // }
 
-// // generate a random alphabet
+// //27.7: generate a random alphabet
 // function getARandomAlphabet(){ // Function to generate a random alphabet letter
 //     const alphabetString = 'abcdefghijklmnopqrstuvwxyz'; // Define a string containing all the lowercase alphabets
 //     const alphabets = alphabetString.split(''); // Split the string into an array of individual letters
@@ -87,7 +88,7 @@ function getElementTextById(elementId){
 // }
 
 
-// // set the background color of keyboard word which will apper in the screen
+// //27-8: set the background color of keyboard word which will apper in the screen
 // // Function to set the background color of a keyboard key
 // // based on the key that will appear on the screen
 // function setBackgroundColorById(elementId) {
@@ -95,15 +96,23 @@ function getElementTextById(elementId){
 //     element.classList.add('bg-orange-400'); // Add a background color class (bg-orange-400) to highlight the key
 // }
 
-// // removeBackgroundColorById from keyboard which  will appear on the screen 
+// // 27-9: removeBackgroundColorById from keyboard which  will appear on the screen when change a new keyword previous keyword background color will remove
 // function removeBackgroundColorById(elementId){ // Function to remove the background color from a keyboard key
 //     const element = document.getElementById(elementId); // Get the keyboard key element by its ID
 //     element.classList.remove('bg-orange-400'); // Remove the background color class (bg-orange-400) to unhighlight the key
 // }
 
+// // 28-1: Function to get the text content of an element by its ID : we can write this by manually selecting id and then turn into innerText or make a function and just call the function : we will call the function here.
+// function getElementTextById(elementId){
+//     const element = document.getElementById(elementId); // Get the element from the DOM using its ID
+//     const text = element.innerText; // Retrieve and return the text content of the element
+//     return text;
+// }
 
-// // update score
-// // Function to get the numeric value of an element's inner text
+
+
+// // update score 
+// //28-4, 28-5: Function to get the numeric value of an element's inner text
 // // This is often used to get the current score or life count
 // function getTextElementValueById(elementId){
 //     const element = document.getElementById(elementId); // Get the element from the DOM using its ID
@@ -113,17 +122,12 @@ function getElementTextById(elementId){
 // }
 
 // // set the updated score as innerText value
-// // Function to set the inner text of an element to a specific value
+// //28-4,28-5: Function to set the inner text of an element to a specific value show the Update score: (to set the value of textElementValue => give the element id and value of id)=> (kar man set korbo, koto set korbo)
 // // This is often used to update the score or life count
 // function setTextElementValueById(elementId, value){
 //     const element = document.getElementById(elementId); // Get the element from the DOM using its ID
 //     element.innerText = value; // Set the element's inner text to the specified value
 // }
 
-// // Function to get the text content of an element by its ID
-// function getElementTextById(elementId){
-//     const element = document.getElementById(elementId); // Get the element from the DOM using its ID
-//     const text = element.innerText; // Retrieve and return the text content of the element
-//     return text;
-// }
+
 
