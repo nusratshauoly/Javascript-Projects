@@ -186,96 +186,96 @@ choices.forEach((choice) => {
 
 
 
-// ----------------------- comment in code -----------------------
+// // ----------------------- comment in code -----------------------
 
-// // Initialize user and computer scores
-// let userScore = 0;
-// let compScore = 0;
+// Initialize user and computer scores
+let userScore = 0;
+let compScore = 0;
 
-// // Select all elements with the class "choice"
-// const choices = document.querySelectorAll(".choice");
-// // Select the message paragraph element by its ID
-// const msg = document.querySelector("#msg");
+// Select all elements with the class "choice"
+const choices = document.querySelectorAll(".choice");
+// Select the message paragraph element by its ID
+const msg = document.querySelector("#msg");
 
-// // Select the user and computer score paragraph elements by their IDs
-// const userScorePara = document.querySelector("#user-score");
-// const compScorePara = document.querySelector("#comp-score");
+// Select the user and computer score paragraph elements by their IDs
+const userScorePara = document.querySelector("#user-score");
+const compScorePara = document.querySelector("#comp-score");
 
-// // Function to generate the computer's choice
-// const genCompChoice = () => {
-//   // Array of possible choices
-//   const options = ["rock", "paper", "scissors"];
-//   // Generate a random index between 0 and 2
-//   const randIdx = Math.floor(Math.random() * 3);
-//   // Return the choice corresponding to the random index
-//   return options[randIdx];
-// };
+// Function to generate the computer's choice
+const genCompChoice = () => {
+  // Array of possible choices
+  const options = ["rock", "paper", "scissors"];
+  // Generate a random index between 0 and 2
+  const randIdx = Math.floor(Math.random() * 3);
+  // Return the choice corresponding to the random index
+  return options[randIdx];
+};
 
-// // Function to handle a draw game
-// const drawGame = () => {
-//   // Update the message text to indicate a draw
-//   msg.innerText = "Game was Draw. Play again.";
-//   // Set the background color of the message to dark blue
-//   msg.style.backgroundColor = "#081b31";
-// };
+// Function to handle a draw game
+const drawGame = () => {
+  // Update the message text to indicate a draw
+  msg.innerText = "Game was Draw. Play again.";
+  // Set the background color of the message to dark blue
+  msg.style.backgroundColor = "#081b31";
+};
 
-// // Function to display the winner of the game
-// const showWinner = (userWin, userChoice, compChoice) => {
-//   if (userWin) {
-//     // Increment the user's score if the user wins
-//     userScore++;
-//     // Update the displayed user score
-//     userScorePara.innerText = userScore;
-//     // Update the message text to indicate the user won
-//     msg.innerText = `You win! Your ${userChoice} beats ${compChoice}`;
-//     // Set the background color of the message to green
-//     msg.style.backgroundColor = "green";
-//   } else {
-//     // Increment the computer's score if the user loses
-//     compScore++;
-//     // Update the displayed computer score
-//     compScorePara.innerText = compScore;
-//     // Update the message text to indicate the user lost
-//     msg.innerText = `You lost. ${compChoice} beats your ${userChoice}`;
-//     // Set the background color of the message to red
-//     msg.style.backgroundColor = "red";
-//   }
-// };
+// Function to display the winner of the game
+const showWinner = (userWin, userChoice, compChoice) => {
+  if (userWin) {
+    // Increment the user's score if the user wins
+    userScore++;
+    // Update the displayed user score
+    userScorePara.innerText = userScore;
+    // Update the message text to indicate the user won
+    msg.innerText = `You win! Your ${userChoice} beats ${compChoice}`;
+    // Set the background color of the message to green
+    msg.style.backgroundColor = "green";
+  } else {
+    // Increment the computer's score if the user loses
+    compScore++;
+    // Update the displayed computer score
+    compScorePara.innerText = compScore;
+    // Update the message text to indicate the user lost
+    msg.innerText = `You lost. ${compChoice} beats your ${userChoice}`;
+    // Set the background color of the message to red
+    msg.style.backgroundColor = "red";
+  }
+};
 
-// // Function to play the game with the user's choice
-// const playGame = (userChoice) => {
-//   // Generate the computer's choice
-//   const compChoice = genCompChoice();
+// Function to play the game with the user's choice
+const playGame = (userChoice) => {
+  // Generate the computer's choice
+  const compChoice = genCompChoice();
 
-//   // Check if the game is a draw
-//   if (userChoice === compChoice) {
-//     // Handle a draw game
-//     drawGame();
-//   } else {
-//     // Variable to track if the user wins
-//     let userWin = true;
-//     // Determine the winner based on user and computer choices
-//     if (userChoice === "rock") {
-//       // Rock vs scissors, paper
-//       userWin = compChoice === "paper" ? false : true;
-//     } else if (userChoice === "paper") {
-//       // Paper vs rock, scissors
-//       userWin = compChoice === "scissors" ? false : true;
-//     } else {
-//       // Scissors vs rock, paper
-//       userWin = compChoice === "rock" ? false : true;
-//     }
-//     // Display the winner
-//     showWinner(userWin, userChoice, compChoice);
-//   }
-// };
+  // Check if the game is a draw
+  if (userChoice === compChoice) {
+    // Handle a draw game
+    drawGame();
+  } else {
+    // Variable to track if the user wins
+    let userWin = true;
+    // Determine the winner based on user and computer choices
+    if (userChoice === "rock") {
+      // Rock vs scissors, paper
+      userWin = compChoice === "paper" ? false : true;
+    } else if (userChoice === "paper") {
+      // Paper vs rock, scissors
+      userWin = compChoice === "scissors" ? false : true;
+    } else {
+      // Scissors vs rock, paper
+      userWin = compChoice === "rock" ? false : true;
+    }
+    // Display the winner
+    showWinner(userWin, userChoice, compChoice);
+  }
+};
 
-// // Add click event listeners to each choice element
-// choices.forEach((choice) => {
-//   choice.addEventListener("click", () => {
-//     // Get the user's choice based on the clicked element's ID
-//     const userChoice = choice.getAttribute("id");
-//     // Play the game with the user's choice
-//     playGame(userChoice);
-//   });
-// });
+// Add click event listeners to each choice element
+choices.forEach((choice) => {
+  choice.addEventListener("click", () => {
+    // Get the user's choice based on the clicked element's ID
+    const userChoice = choice.getAttribute("id");
+    // Play the game with the user's choice
+    playGame(userChoice);
+  });
+});
