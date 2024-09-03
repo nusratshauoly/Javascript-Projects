@@ -16,7 +16,6 @@ h1{
     gap: 3rem;
     margin-top: 5rem;
 }
-
 .choice{
     height: 165px;
     width: 165px;
@@ -24,7 +23,6 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .choice:hover{
     cursor: pointer;
@@ -56,6 +54,5 @@ img{
     font-size: 2rem;
     display: inline;
     padding: 1rem;
-    border-radius: 1rem;
-    
+    border-radius: 1rem;  
 }
