@@ -5,8 +5,8 @@ let newGameBtn = document.querySelector("#new-btn");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
 
-let turnO = true; //playerX, playerO
-let count = 0; //To Track Draw
+let turnO = true; 
+let count = 0;
 
 const winPatterns = [
   [0, 1, 2],
@@ -26,18 +26,15 @@ const resetGame = () => {
   msgContainer.classList.add("hide");
 };
 
-//  step - 2
+// step - 2
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
     if (turnO) {
-      //playerO
       box.innerText = "O";
-      box.style.backgroundColor = 'black';
       box.style.color = 'white';
       turnO = false;
     } else {
-      //playerX
-      box.innerText = 'X';
+      box.innerText = "X";
       box.style.color = 'black'
       turnO = true;
     }
@@ -52,49 +49,54 @@ boxes.forEach((box) => {
   });
 });
 
-//  step - 7
+// step - 7
 const gameDraw = () => {
   msg.innerText = `Game was a Draw.`;
   msgContainer.classList.remove("hide");
   disableBoxes();
 };
-
-//  step - 5
+// step - 5
 const disableBoxes = () => {
   for (let box of boxes) {
     box.disabled = true;
   }
 };
-
-//  step - 6
+// step - 6
+// Function to enable all boxes and clear their text
 const enableBoxes = () => {
   for (let box of boxes) {
     box.disabled = false;
     box.innerText = "";
   }
 };
-
-//  step - 4
+// step - 4
+// Function to display the winner
 const showWinner = (winner) => {
   msg.innerText = `Congratulations, Winner is ${winner}`;
   msgContainer.classList.remove("hide");
   disableBoxes();
 };
 
-//  step - 3
+// step - 3
+// Function to check if there is a winner
 const checkWinner = () => {
   for (let pattern of winPatterns) {
-    let pos1Val = boxes[pattern[0]].innerText;
-    let pos2Val = boxes[pattern[1]].innerText;
-    let pos3Val = boxes[pattern[2]].innerText;
+    let pos1Val = boxes[pattern[0]].innerText;  
+    let pos2Val = boxes[pattern[1]].innerText; 
+    let pos3Val = boxes[pattern[2]].innerText; 
 
-    if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
-      if (pos1Val === pos2Val && pos2Val === pos3Val) {
-        showWinner(pos1Val);
-        return true;
+    // Check if all three positions are not empty.
+    if (pos1Val != "" && pos2Val != "" && pos3Val != "") {  
+      
+      // Check if the values in the three positions are the same, indicating a win.
+      if (pos1Val === pos2Val && pos2Val === pos3Val) {  
+        
+        showWinner(pos1Val);  
+        return true;  
       }
     }
   }
+  // If no winner is found, the function completes and returns 'undefined' (implicitly).
 };
 
 newGameBtn.addEventListener("click", resetGame);
@@ -153,7 +155,6 @@ resetBtn.addEventListener("click", resetGame);
 //     if (turnO) {
 //       // Player O
 //       box.innerText = "O";
-//       box.style.backgroundColor = 'black';
 //       box.style.color = 'white';
 //       turnO = false;
 //     } else {
@@ -213,25 +214,28 @@ resetBtn.addEventListener("click", resetGame);
 // };
 
 // // Function to check if there is a winner
-// const checkWinner = () => {
-//   // Loop through each winning pattern
-//   for (let pattern of winPatterns) {
-//     // Get the values of the boxes in the current pattern
-//     let pos1Val = boxes[pattern[0]].innerText;
-//     let pos2Val = boxes[pattern[1]].innerText;
-//     let pos3Val = boxes[pattern[2]].innerText;
+// const checkWinner = () => {  // Defines a function called 'checkWinner' using arrow function syntax.
+//   for (let pattern of winPatterns) {  // Iterates over each pattern in the 'winPatterns' array. Each pattern represents a possible winning combination of indices on the game board.
+    
+//     // Retrieve the values from the game board boxes at the indices specified by the current pattern.
+//     let pos1Val = boxes[pattern[0]].innerText;  // Gets the text content of the first position in the pattern.
+//     let pos2Val = boxes[pattern[1]].innerText;  // Gets the text content of the second position in the pattern.
+//     let pos3Val = boxes[pattern[2]].innerText;  // Gets the text content of the third position in the pattern.
 
-//     // Check if all three boxes in the pattern are not empty
-//     if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
-//       // Check if all three boxes have the same value
-//       if (pos1Val === pos2Val && pos2Val === pos3Val) {
-//         // Show the winner and return true
-//         showWinner(pos1Val);
-//          return true;
+//     // Check if all three positions are not empty.
+//     if (pos1Val != "" && pos2Val != "" && pos3Val != "") {  // Ensures that all three positions have values and are not empty strings.
+      
+//       // Check if the values in the three positions are the same, indicating a win.
+//       if (pos1Val === pos2Val && pos2Val === pos3Val) {  // Compares the values of the three positions; if they are all equal, it means there's a winner.
+        
+//         showWinner(pos1Val);  // Calls the 'showWinner' function, passing the value of the winning positions (either 'X' or 'O').
+//         return true;  // Returns 'true' to indicate that a winner has been found, and exits the function early.
 //       }
 //     }
 //   }
+//   // If no winner is found, the function completes and returns 'undefined' (implicitly).
 // };
+
 // newGameBtn.addEventListener("click", resetGame);
 // resetBtn.addEventListener("click", resetGame);
 
