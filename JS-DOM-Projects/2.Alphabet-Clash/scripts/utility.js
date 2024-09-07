@@ -1,15 +1,26 @@
 // hide other section elements when opening one section elements
 // common function to hidden content
 function hideElementById(elementId) { // Function to hide an HTML element by its ID
-    const element = document.getElementById(elementId); // Get the element from the DOM using its ID
-    element.classList.add('hidden'); // Add the 'hidden' class to the element, which hides it from view
+    const element = document.getElementById(elementId);// Get the element from the DOM using its ID
+    if (element) {
+        element.classList.add('hidden'); // Add the 'hidden' class to the element, which hides it from view
+    }
+    else {
+        console.error(`Element with ID ${elementId} not found.`);
+    }
+    
 }
 
 // show one section elements when hide other section elements
 // common function to show content
 function showElementById(elementId) {
     const element = document.getElementById(elementId);
-    element.classList.remove('hidden');
+    if (element) {
+        element.classList.remove('hidden');
+    }
+    else {
+        console.error(`Element with ID ${elementId} not found.`);
+    }
 }
 
 // generate a random alphabet when start playing
@@ -29,14 +40,23 @@ function getARandomAlphabet(){
 // set the background color of keyboard word which will apper in the screen
 function setBackgroundColorById(elementId) {
     const element = document.getElementById(elementId);
-    element.classList.add('bg-orange-400');
+    if (element) {
+        element.classList.add('bg-orange-400');
+    } else {
+        console.error(`Element with ID ${elementId} not found.`);
+    }
+    
 }
 
 // remove the background color of keyboard word which will appear in the screen
 // removeBackgroundColorById from keyboard which will appear on the screen 
 function removeBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
-    element.classList.remove('bg-orange-400');
+    if (element) {
+        element.classList.remove('bg-orange-400');
+    } else {
+        console.error(`Element with ID ${elementId} not found.`);
+    }
 }
 
 // function to get the innerText value of an element by its ID

@@ -20,16 +20,19 @@ function continueGame() {
     // console.log('your random alphabet', alphabet);
 
     // set randomly generated alphabet to the screen (show it)
-     const currentAlphabetElement = document.getElementById('current-alphabet');
-    currentAlphabetElement.innerText = alphabet;
-
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    if (currentAlphabetElement) {
+        currentAlphabetElement.innerText = alphabet;
+    } else {
+        console.error('Current alphabet element not found.');
+    }
     // set background color
     setBackgroundColorById(alphabet);
 }
 
 // when start pressing keyword without seeing the screen
 function handleKeyboardKeyUpEvent(event) {
-    const playerPressed = event.key;
+    const playerPressed = event.key.toLowerCase();
     console.log( 'player pressed', playerPressed)
 
     // key player is expected to press
@@ -44,7 +47,6 @@ function handleKeyboardKeyUpEvent(event) {
         const updatedScore = currentScore + 1;
         setTextElementValueById('current-score', updatedScore);
 
-
         // start a new round
         removeBackgroundColorById(expectedAlphabet);
         continueGame();
@@ -57,12 +59,7 @@ function handleKeyboardKeyUpEvent(event) {
         setTextElementValueById('current-life', updatedLife);
 
         // if life score is 0 
-        if (updatedLife === 0) {
-            gameOver();
-        }
-
-        // stop the game if pressed 'Esc'
-        if (playerPressed === 'Escape') {
+        if (updatedLife === 0 || playerPressed === 'Escape') {
             gameOver();
         }
 
