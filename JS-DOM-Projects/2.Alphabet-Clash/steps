@@ -3,4 +3,5 @@ appear and the same alphabet in the keyboard background color will appear
 2. we have to click the same alphabet without seeing the keyboard
 3. if the alphabet matches 1 score will add in the score button
 4. if the alphabet does not match
-decrease 1 score in the life button out of 5
+decrease 1 score in the life button out of 5 and if life button spends all the score 5 to 1 the final score section will appear.
+5. can still continue playing or type "escape" to resume the game.

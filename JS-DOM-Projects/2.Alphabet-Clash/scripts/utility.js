@@ -1,15 +1,18 @@
+// hide other section elements when opening one section elements
 // common function to hidden content
 function hideElementById(elementId) { // Function to hide an HTML element by its ID
     const element = document.getElementById(elementId); // Get the element from the DOM using its ID
     element.classList.add('hidden'); // Add the 'hidden' class to the element, which hides it from view
 }
 
+// show one section elements when hide other section elements
 // common function to show content
 function showElementById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.remove('hidden');
 }
 
+// generate a random alphabet when start playing
 // generate a random alphabet
 function getARandomAlphabet(){
     const alphabetString = 'abcdefghijklmnopqrstuvwxyz';
@@ -22,19 +25,21 @@ function getARandomAlphabet(){
     return alphabet;
 }
 
-
+// set the background color of keyboard word which will appear in the screen
 // set the background color of keyboard word which will apper in the screen
 function setBackgroundColorById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.add('bg-orange-400');
 }
 
+// remove the background color of keyboard word which will appear in the screen
 // removeBackgroundColorById from keyboard which will appear on the screen 
 function removeBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
     element.classList.remove('bg-orange-400');
 }
 
+// function to get the innerText value of an element by its ID
 // Function to get the text content of an element by its ID
 function getElementTextById(elementId){
     const element = document.getElementById(elementId);
@@ -42,7 +47,7 @@ function getElementTextById(elementId){
     return text;
 }
 
-// update score
+// update score value
 function getTextElementValueById(elementId){
     const element = document.getElementById(elementId);
     const elementValueText = element.innerText;
@@ -50,7 +55,7 @@ function getTextElementValueById(elementId){
     return value;
 }
 
-// set the updated score as innerText value
+// set the updated score value as innerText value
 function setTextElementValueById(elementId, value){
     const element = document.getElementById(elementId);
     element.innerText = value;
@@ -61,7 +66,6 @@ function setTextElementValueById(elementId, value){
 
 
 // // ---------------------------------- with comment -------------------------
-
 
 // // 27.6: common function to hidden content
 // function hideElementById(elementId) { // Function to hide an HTML element by its ID
@@ -74,6 +78,7 @@ function setTextElementValueById(elementId, value){
 //     const element = document.getElementById(elementId); // Get the element from the DOM using its ID
 //     element.classList.remove('hidden'); // Remove the 'hidden' class from the element, making it visible
 // }
+
 
 // //27.7: generate a random alphabet
 // function getARandomAlphabet(){ // Function to generate a random alphabet letter

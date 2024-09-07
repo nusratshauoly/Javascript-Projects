@@ -20,21 +20,21 @@ function continueGame() {
     // console.log('your random alphabet', alphabet);
 
     // set randomly generated alphabet to the screen (show it)
-    const currentAlphabetElement = document.getElementById('current-alphabet');
+     const currentAlphabetElement = document.getElementById('current-alphabet');
     currentAlphabetElement.innerText = alphabet;
 
     // set background color
     setBackgroundColorById(alphabet);
 }
 
-// when star pressing keyword seeing the screen
+// when start pressing keyword without seeing the screen
 function handleKeyboardKeyUpEvent(event) {
     const playerPressed = event.key;
     console.log( 'player pressed', playerPressed)
 
     // key player is expected to press
     const currentAlphabetElement = getElementTextById('current-alphabet');
-    const expectedAlphabet = currentAlphabet.toLowerCase();
+    const expectedAlphabet = currentAlphabetElement.toLowerCase();
 
     // check right or wrong key pressed
     if (playerPressed === expectedAlphabet) {
@@ -83,18 +83,18 @@ function gameOver(){
     // update final score
     // 1.get the final score
     const lastScore = getTextElementValueById('current-score');
-    console.log(lastScore);
+    // console.log(lastScore);
     setTextElementValueById('last-score', lastScore);
 
     // clear the last selected alphabet highlight
-    const currentAlphabet = getElementTextById('current-alphabet');
+    const currentAlphabetElement = getElementTextById('current-alphabet');
     // console.log(currentAlphabet);
-    removeBackgroundColorById(currentAlphabet);
+    removeBackgroundColorById(currentAlphabetElement);
 }
 
 
 
-// // ------------------------------------------------------------------ with comment ----------------------------------------------------------------------------------------------------------------------------
+// // // ------------------------------------------------------------------ with comment ----------------------------------------------------------------------------------------------------------------------------
 
 // //27-6: create function for play button (home-scrren & final score button)
 // function play() { // Function triggered when the "Play" button is clicked
@@ -148,7 +148,7 @@ function gameOver(){
 //     const currentAlphabetElement = getElementTextById('current-alphabet');
 
 //     // Convert the displayed alphabet to lowercase to match the key press
-//     const expectedAlphabet = currentAlphabet.toLowerCase();
+//     const expectedAlphabet = currentAlphabetElement.toLowerCase();
 
 //     //28-4, 28-5: check right or wrong key pressed
 //     // Check if the player pressed the correct key
