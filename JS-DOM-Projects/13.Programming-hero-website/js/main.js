@@ -4,8 +4,8 @@ const milestonesData = JSON.parse(data).data;
 // Function to load course milestones data
 function loadMilestones() {
   const milestones = document.querySelector(".milestones");
-
-    // Set the inner HTML of the milestones container
+  // Set the inner HTML of the milestones container
+  
     // Map over each milestone and create HTML structure
   milestones.innerHTML = `${milestonesData
     .map(function (milestone) {
@@ -54,14 +54,13 @@ function openMilestone(milestoneElement, id) {
   currentPanel.classList.toggle("show");
   showMilestone(id);
 }
-
-
 // Function to show milestone details
 function showMilestone(id) {
     const milestoneImage = document.querySelector(".milestoneImage");
     const name = document.querySelector(".title");
   const details = document.querySelector(".details");
-    milestoneImage.style.opacity = "0";
+  milestoneImage.style.opacity = "0";
+  
     // Set the source of the milestone image
     milestoneImage.src = milestonesData[id].image;
     name.innerText = milestonesData[id].name;
@@ -72,13 +71,12 @@ milestoneImage.onload = function () {
   this.style.opacity = "1";
 };
 
-
 // Function to mark a milestone as done or not done
 function markMileStone(checkbox, id) {
     const doneList = document.querySelector(".doneList");
     const milestonesList = document.querySelector(".milestones");
-    const item = document.getElementById(id);
-
+  const item = document.getElementById(id);
+  
     // If the checkbox is checked (milestone is marked as done)
     if (checkbox.checked) {
         milestonesList.removeChild(item);
@@ -89,15 +87,16 @@ function markMileStone(checkbox, id) {
     doneList.removeChild(item);
   }
 }
+
 // Load milestones data when the script runs
 loadMilestones();
 
 
 
 
-// --------------------------------- comment in code -------------------------
+// // --------------------------------- comment in code -------------------------
 
-// // Parse the JSON data into a JavaScript object
+// // Parse the JSON data into a JavaScript object and file er vitor data name e object ache tai (.data) ja (jsoneditoronline.org) theke convert kore nibo 
 // const milestonesData = JSON.parse(data).data;
 
 // // load course milestones data
@@ -110,31 +109,40 @@ loadMilestones();
 //     // Map over each milestone and create HTML structure
 //   milestones.innerHTML = `${milestonesData
 //     .map(function (milestone) {
+//       // Create HTML structure for each milestone , ${milestone._id} here for milestone number
 //       return `<div class="milestone border-b" id="${milestone._id}">
 //       <div class="flex">
+//   <!-- Create a checkbox for marking the milestone as done, calling markMileStone function on click -->
 //         <div class="checkbox"><input type="checkbox" onclick="markMileStone(this, ${
 //           milestone._id
 //         })" /></div>
+//         <!-- Clickable area for opening the milestone details, calling openMilestone function on click -->
 //         <div onclick="openMilestone(this, ${milestone._id})">
 //           <p>
+//           <!-- Display the milestone name -->
 //             ${milestone.name}
+//             <!-- Icon for expanding/collapsing milestone details -->
 //             <span><i class="fas fa-chevron-down"></i></span>
 //           </p>
 //         </div>
 //       </div>
 //       <!-- Map over each module within a milestone and create HTML structure -->
+//       <!-- Hidden panel that contains the list of modules within the milestone -->
 //       <div class="hidden_panel">
 //         ${milestone.modules
-//           .map(function (module) {
-//             return `<div class="module border-b">
+//         .map(function (module) {
+//             // Create HTML structure for each module within the milestone
+//           return `<div class="module border-b">
+//              <!-- Display the module name -->
 //             <p>${module.name}</p>
 //           </div>`;
+//           // Join all module HTML strings into one to form the complete hidden panel content
 //           })
 //           .join("")}
 //       </div>
 //     </div>`;
 //     })
-//     // Join all milestone HTML strings into one
+//     // Join all milestone HTML strings into one to form the complete content of the milestones container
 //     .join("")}`;
 // }
 
@@ -144,16 +152,17 @@ loadMilestones();
 //     const currentPanel = milestoneElement.parentNode.nextElementSibling;
 //     // Select the currently shown panel
 //     const shownPanel = document.querySelector(".show");
-//     // Select the currently active milestone
+//     // Select the currently active milestone and make its font bold so that understand it is currently selected milestone
 //   const active = document.querySelector(".active");
 
 //     // first remove previous active class if any [other than the clicked one]
-//     // If there is an active milestone and it's not the clicked one, remove the active class
+//     // If there is an active milestone that is already open and it's not the clicked one, remove the active class
 //   if (active && !milestoneElement.classList.contains("active")) {
 //     active.classList.remove("active");
 //   }
 
-//     // toggle current clicked one
+//   // ** (toggle) use when button is closed by click it will open, and it is opened by click it will close. 
+//     // toggle current clicked one 
 //     // Toggle the active class on the clicked milestone
 //   milestoneElement.classList.toggle("active");
 
@@ -166,12 +175,12 @@ loadMilestones();
 //     // Toggle the show class on the current panel
 //   currentPanel.classList.toggle("show");
 
-//     // Show the details of the clicked milestone
+//     // Show the details image of the clicked milestone we use id cause every milestone image id is different
 //   showMilestone(id);
 // }
 
 
-// // Function to show milestone details
+// // Function to show milestone details (when click the new milestone the cover image will appear)
 // function showMilestone(id) {
 //     // Select the milestone image element
 //     const milestoneImage = document.querySelector(".milestoneImage");
@@ -180,7 +189,7 @@ loadMilestones();
 //     // Select the details element
 //   const details = document.querySelector(".details");
 
-//     // Set the opacity of the milestone image to 0 (for smooth transition)
+//     // Set the opacity of the milestone image to 0 (for smooth transition) so that when click next image can appear
 //     milestoneImage.style.opacity = "0";
 //     // Set the source of the milestone image
 //     milestoneImage.src = milestonesData[id].image;
@@ -193,13 +202,14 @@ loadMilestones();
 // // listen for hero image load
 // // Listen for the milestone image load event
 // const milestoneImage = document.querySelector(".milestoneImage");
+// // kono image load hoyeche kina dekhar jonno (onload) use korbo
 // milestoneImage.onload = function () {
-//     // Set the opacity of the image to 1 when it loads
+//     // Set the opacity of the image to 1 when it loads so that when click image can appear
 //   this.style.opacity = "1";
 // };
 
 
-// // Function to mark a milestone as done or not done
+// // Function to check mark a milestone as done or not done and give each milestone div a unique id number
 // function markMileStone(checkbox, id) {
 //     // Select the done list container
 //     const doneList = document.querySelector(".doneList");
@@ -224,7 +234,9 @@ loadMilestones();
 //     doneList.removeChild(item);
 
 //     // task - do the sorting
-//     // reload list
+//       // reload list
+//       // ._id diye sort korte hobe, full milestone er data ta loop kore cholchilo , r ekhane puro data ta reload kore dite hobe
+//       // reload function likhte hobe and reload list korte hobe.
 //   }
 // }
 // // Load milestones data when the script runs
