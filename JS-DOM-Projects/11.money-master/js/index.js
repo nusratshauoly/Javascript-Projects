@@ -19,17 +19,17 @@ document.getElementById('calculate').addEventListener('click', function () {
 // save button
 document.getElementById('save-button').addEventListener('click', function () {
     const saveField = getInputFieldValueById('save-field');
-    const balance = getTextElementById('balance');
+    const balanceText = getTextElementById('balance');
     
     // Ensure save field and balance are valid
-    if (saveField === null || isNaN(balance) || balance <= 0) {
+    if (saveField === null || isNaN(balanceText) || balanceText <= 0) {
         alert('Please calculate balance first or enter a valid save percentage.');
         return;
     }
 
-    const savingAmount = (balance * saveField) / 100;
+    const savingAmount = (balanceText * saveField) / 100;
     setTextElementValueById('save-amount', savingAmount);
-    const remainingBalance = balance + savingAmount;
+    const remainingBalance = balanceText + savingAmount;
     setTextElementValueById('remaining-balance', remainingBalance);
     // const remainingBalance = balance - savingAmount;
     // setTextElementValueById('remaining-balance', remainingBalance);

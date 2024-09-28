@@ -73,7 +73,7 @@ function addToCalculationEntry(areaType, area) {
 
 
 
-// ---------------------------- code with comments ---------------------------
+// // ---------------------------- code with comments ---------------------------
 
 // //  reusable function ----> reduce duplicate code
 
