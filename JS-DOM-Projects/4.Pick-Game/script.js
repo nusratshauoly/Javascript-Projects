@@ -34,7 +34,7 @@ const newGame = function () {
 };
 newGame();
 
-// switching the player
+// --------------- switching the player ------------------
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   currentScore = 0;
@@ -43,7 +43,7 @@ const switchPlayer = function () {
   player1El.classList.toggle('player--active');
 };
 
-// rolling dice functionality
+// ------------ rolling dice functionality -------------
 btnRoll.addEventListener('click', function () {
   if (playing) {
     // generating a random dice roll
@@ -51,7 +51,7 @@ btnRoll.addEventListener('click', function () {
 
     // display dice
     diceEl.classList.remove('hidden');
-    diceEl.src = `dice-${dice}.png`;
+    diceEl.src = `images/dice-${dice}.png`;
 
     // check for rolled 1
     if (dice !== 1) {
@@ -66,7 +66,7 @@ btnRoll.addEventListener('click', function () {
   }
 });
 
-// button hold
+// ---------- button hold -------------
 btnHold.addEventListener('click', function () {
   if (playing) {
     // add current score to the active player's score
@@ -138,7 +138,7 @@ btnNew.addEventListener('click', newGame);
 // const switchPlayer = function () {
 //   document.getElementById(`current--${activePlayer}`).textContent = 0; // Reset current score display for the active player
 //   currentScore = 0; // Reset current score
-//   activePlayer = activePlayer === 0 ? 1 : 0; // Switch active player
+//   activePlayer = activePlayer === 0 ? 1 : 0; // Switch active player (If the current activePlayer is 0, it changes it to 1. && ||  If the current activePlayer is 1, it changes it to 0.)
 //   player0El.classList.toggle('player--active'); // Toggle active class for player 1
 //   player1El.classList.toggle('player--active'); // Toggle active class for player 2
 // };
