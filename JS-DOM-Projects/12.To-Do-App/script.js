@@ -189,3 +189,102 @@ form.addEventListener('submit', addTask);
 
 
 
+// ----------------------- updated code from --------------------------------
+
+
+
+// 'use strict';
+
+// let form = document.querySelector('form');
+// let newTask = document.querySelector('#new-task');
+// let todoUl = document.querySelector('.todo-list');
+// let completeUl = document.querySelector('.complete-list');
+
+// // Create a new task
+// const createTask = function (task) {
+//     let listItem = document.createElement('li');
+//     listItem.className = 'item';
+
+//     let checkbox = document.createElement('input');
+//     checkbox.type = 'checkbox';
+
+//     let label = document.createElement('label');
+//     label.innerText = task;
+
+//     listItem.appendChild(checkbox);
+//     listItem.appendChild(label);
+
+//     return listItem;
+// }
+
+// // Add task
+// const addTask = function (event) {
+//     event.preventDefault();
+
+//     if (newTask.value.trim() === '') return; // Prevent adding empty tasks
+
+//     let listItem = createTask(newTask.value);
+//     todoUl.appendChild(listItem);
+
+//     newTask.value = '';
+//     bindIncompleteItems(listItem, completeTask);
+// }
+
+// // Complete task
+// const completeTask = function () {
+//     let listItem = this.parentNode;
+
+//     let deleteBtn = document.createElement('button');
+//     deleteBtn.innerText = 'Delete';
+//     deleteBtn.className = 'delete';
+
+//     let checkbox = listItem.querySelector('input[type="checkbox"]');
+//     if (checkbox) {
+//         checkbox.remove(); // Remove checkbox after completion
+//     }
+
+//     listItem.appendChild(deleteBtn); // Add the delete button
+//     completeUl.appendChild(listItem); // Move the task to the complete list
+
+//     bindCompleteItems(listItem, deleteTask);
+// }
+
+// // Delete task
+// const deleteTask = function () {
+//     let listItem = this.parentNode;
+//     let ul = listItem.parentNode;
+//     ul.removeChild(listItem);
+// }
+
+// // Bind incomplete items to completeTask
+// const bindIncompleteItems = function (taskItem, checkboxClick) {
+//     let checkbox = taskItem.querySelector('input[type="checkbox"]');
+//     if (checkbox) {
+//         checkbox.onchange = checkboxClick; // Bind the onchange event to the checkbox
+//     } else {
+//         console.error('No checkbox found for:', taskItem);
+//     }
+// }
+
+// // Bind complete items to deleteTask
+// const bindCompleteItems = function (taskItem, clickDeleteButton) {
+//     let deleteBtn = taskItem.querySelector('.delete');
+//     if (deleteBtn) {
+//         deleteBtn.onclick = clickDeleteButton; // Bind the click event to the delete button
+//     } else {
+//         console.error('No delete button found for:', taskItem);
+//     }
+// }
+
+// // Initialize existing tasks in the todo list
+// for (let i = 0; i < todoUl.children.length; i++) {
+//     bindIncompleteItems(todoUl.children[i], completeTask);
+// }
+
+// // Initialize existing tasks in the complete list
+// for (let i = 0; i < completeUl.children.length; i++) {
+//     bindCompleteItems(completeUl.children[i], deleteTask);
+// }
+
+// // Handle form submission
+// form.addEventListener('submit', addTask);

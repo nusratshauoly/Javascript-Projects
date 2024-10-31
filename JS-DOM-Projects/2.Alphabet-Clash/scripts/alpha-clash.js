@@ -2,8 +2,9 @@
 function play() {
     // hide everything show only the playground
     hideElementById('home-screen');
-    hideElementById('final-score');
     showElementById('play-ground');
+    hideElementById('final-score');
+    
     // reset score and life
     setTextElementValueById('current-life', 5);
     setTextElementValueById('current-score', 0);
@@ -38,7 +39,6 @@ function handleKeyboardKeyUpEvent(event) {
     // key player is expected to press
     const currentAlphabetElement = getElementTextById('current-alphabet');
     const expectedAlphabet = currentAlphabetElement.toLowerCase();
-
     // check right or wrong key pressed
     if (playerPressed === expectedAlphabet) {
         console.log('you got a point!');
@@ -62,14 +62,9 @@ function handleKeyboardKeyUpEvent(event) {
         if (updatedLife === 0 || playerPressed === 'Escape') {
             gameOver();
         }
-
     } 
 }
-
 document.addEventListener('keyup', handleKeyboardKeyUpEvent);
-
-
-
 
 // final score
 

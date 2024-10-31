@@ -87,10 +87,8 @@ const checkWinner = () => {
 
     // Check if all three positions are not empty.
     if (pos1Val != "" && pos2Val != "" && pos3Val != "") {  
-      
       // Check if the values in the three positions are the same, indicating a win.
       if (pos1Val === pos2Val && pos2Val === pos3Val) {  
-        
         showWinner(pos1Val);  
         return true;  
       }

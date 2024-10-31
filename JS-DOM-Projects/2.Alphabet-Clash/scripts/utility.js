@@ -8,7 +8,6 @@ function hideElementById(elementId) { // Function to hide an HTML element by its
     else {
         console.error(`Element with ID ${elementId} not found.`);
     }
-    
 }
 
 // show one section elements when hide other section elements
