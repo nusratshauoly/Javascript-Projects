@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo Home Page</title>
+
+    <!-- daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="flex justify-center">
+      <!-- daisyUi => (phone) -->
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-3">
+            <!-- available balance -->
+            <!-- daisyUI => Data Display => stat -->
+            <div>
+              <div class="stats shadow">
+                <div class="stat">
+                  <!-- <div class="stat-title">Total Page Views</div> (remove this line)-->
+                  <div id="account-balance" class="stat-value">9400</div>
+                  <div class="stat-desc">Available Balance</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- (daisyui => layout => divider => divider with no text) -->
+            <div class="divider"></div>
+
+            <!-- user action button -->
+
+            <!-- (daisyUI => Actions => button => button sizes => large button) -->
+            <div>
+              <button id="btn-show-add-money" class="btn btn-lg">
+                Add Money
+              </button>
+              <button id="btn-show-cash-out" class="btn btn-lg">
+                Cash Out
+              </button>
+            </div>
+
+            <!-- (daisyui => layout => divider => divider with no text) -->
+            <div class="divider"></div>
+
+            <!-- add money form start -->
+            <!-- (layout => hero => hero with form) -->
+            <div
+              id="add-money-form"
+              class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Amount</span>
+                  </label>
+                  <input
+                    id="input-add-money"
+                    type="text"
+                    placeholder="Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input
+                    id="input-pin-number"
+                    type="password"
+                    placeholder="Pin Number"
+                    class="input input-bordered"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="btn-add-money" class="btn btn-primary">
+                    Add Money
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- add money form start end -->
+
+            <!-- default hishesbe (add money) show korbe and (cash out) hidden thakbe -->
+
+            <!-- cash out start -->
+            <div
+              id="cash-out-form"
+              class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Amount</span>
+                  </label>
+                  <input
+                    id="input-cash-out"
+                    type="text"
+                    placeholder="Cash Out Amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin</span>
+                  </label>
+                  <input
+                    id="input-cash-out-pin"
+                    type="password"
+                    placeholder="Pin Number"
+                    class="input input-bordered"
+                    autocomplete="off"
+                    required
+                  />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="btn-cash-out" class="btn btn-primary">
+                    Cash Out
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- cash out end -->
+
+            <!--  -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- external js file -->
+    <script src="./js/home.js"></script>
+    <script src="./js/cashout.js"></script>
+
+    <!-- (add money & cash out) button switch remove and add hide section -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
